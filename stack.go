@@ -61,7 +61,7 @@ func (f Frame) Format(s fmt.State, verb rune) {
 			} else {
 				name := fn.Name()
 				file, _ := fn.FileLine(pc)
-				fmt.Fprintf(s, "%s (%s)", funcname(name), file)
+				fmt.Fprintf(s, "%s @ %s", funcname(name), file)
 			}
 		default:
 			io.WriteString(s, path.Base(f.file()))
