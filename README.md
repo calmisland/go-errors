@@ -2,7 +2,7 @@
 
 Package errors provides simple error handling primitives.
 
-`go get github.com/pkg/errors`
+`go get github.com/calmisland/go-errors`
 
 The traditional error handling idiom in Go is roughly akin to
 ```go
@@ -39,7 +39,7 @@ default:
 }
 ```
 
-[Read the package documentation for more information](https://godoc.org/github.com/pkg/errors).
+[Read the package documentation for more information](https://godoc.org/github.com/calmisland/go-errors).
 
 ## Roadmap
 
