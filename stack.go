@@ -66,7 +66,7 @@ func (f Frame) Format(s fmt.State, verb rune) {
 	case 's':
 		switch {
 		case s.Flag('+'):
-			io.WriteString(s, funcname(f.name()))
+			io.WriteString(s, f.name())
 			io.WriteString(s, " @ ")
 			io.WriteString(s, f.file())
 		default:
