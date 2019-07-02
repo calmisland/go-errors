@@ -97,6 +97,11 @@ import (
 	"io"
 )
 
+// Causer is an interface that can be used to retrieve the cause of an error.
+type Causer interface {
+	Cause() error
+}
+
 // New returns an error with the supplied message.
 // New also records the stack trace at the point it was called.
 func New(message string) error {

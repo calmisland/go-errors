@@ -14,6 +14,11 @@ import (
 // its value represents the program counter + 1.
 type Frame uintptr
 
+// StackTracer is an interface that can be used to retrieve the stack trace of an error.
+type StackTracer interface {
+	StackTrace() StackTrace
+}
+
 // pc returns the program counter for this frame;
 // multiple frames may have the same PC value.
 func (f Frame) pc() uintptr { return uintptr(f) - 1 }
